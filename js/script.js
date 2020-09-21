@@ -11,7 +11,8 @@ const STORE = {
      "Sanitizer"
     ],
     correctAnswer: "Jeans"
-    },{
+	}],
+	JustDonThings: [{
     question: "Where did Anukruti got her name Gudiya?",
     code: ``,
     answers: [
@@ -21,7 +22,8 @@ const STORE = {
      "F40"
     ],
     correctAnswer: "Workshop Corridor"
-   },{
+   }],
+   JustGudiyaThings: [{
     question: "Why is Anukruti called Don",
     code: ``,
     answers: [
@@ -31,17 +33,8 @@ const STORE = {
      "All of the above"
     ],
     correctAnswer: "All of the above"
-   },{
-    question: "Is there something going on between Anukruti and Priya",
-    code: ``,
-    answers: [
-     "yes",
-     "C",
-     "A",
-     "B"
-    ],
-    correctAnswer: "A"
-   },{
+   }],
+   JustAnuThings: [{
     question: "Who has Anu third wheeled the most with?",
     code: ``,
     answers: [
@@ -50,8 +43,9 @@ const STORE = {
      "Priya Vivek",
      "All of the above"
     ],
-    correctAnswer: "Priya Vivek"
-   },{
+    correctAnswer: "Shubhangi Vatsal"
+   }],
+   JustNaaginThings: [{
     question: "Which of the following is legitimate ? ",
     code: ``,
     answers: [
@@ -61,7 +55,8 @@ const STORE = {
      "Complan"
     ],
     correctAnswer: "Bournvita"
-   },{
+   }],
+   JustDidiThings: [{
     question: "Who developed this website for you?",
     code: ``,
     answers: [
@@ -71,26 +66,50 @@ const STORE = {
      "Sanjeeb"
     ],
     correctAnswer: "Shreyash"
-   },{
+   }],
+   JustSupplierThings: [{
     question: "Which of these is a cake ingredient?",
     code: ``,
     answers: [
      "Curd",
-     "Aryan",
-     "Shreyash",
-     "Sanjeeb"
+     "Condensed Milk",
+     "Eggs",
+     "Beer"
     ],
-    correctAnswer: "Shreyash"
-   },{
-    question: "identify the incorrect spelling",
+    correctAnswer: "Curd"
+   }],
+   JustIkchadhariThings: [{
+    question: "Identify the incorrect spelling",
     code: ``,
     answers: [
-     "Anukruti",
+     "ଅନୁକୃତି",
      "अनुकृति ",
      "అనుకృతి",
      "We don't really know"
     ],
     correctAnswer: "We don't really know"
+   }],
+   JustThings: [{
+    question: "What are the things we haven't used as a makeup on Anukriti's face:",
+    code: ``,
+    answers: [
+     "Tomato",
+     "Egg",
+     "Rotten banana",
+     "Cake"
+    ],
+    correctAnswer: "Egg"
+   }],
+   JustMomThings: [{
+    question: "With who among the following is Anukriti secretly dating:",
+    code: ``,
+    answers: [
+     "Priyadarshini",
+     "Shubhangi",
+     "Sakshi",
+     "All the above"
+    ],
+    correctAnswer: "All the above"
    }
   ],
  }
@@ -185,9 +204,9 @@ I have nothing else to teach you. Move on and prosper!
 		let endMsg = `You got ${appState.percCorrect}% correct!`
 		let endFeedback = ``;
 		if(appState.progress.incorrectCategories.length === 0){
-			endFeedback = `You aced it! Good job!`;
+			endFeedback = `Badhai ho Mummy You won! here is the secret link :p - `;
 		} else {
-			endFeedback = `You may want to study up on the following categories:`;
+			endFeedback = `You are bad at the following TRY AGAIN-`;
 		}
 		
 		$('.quiz-end-score').html(endMsg);
