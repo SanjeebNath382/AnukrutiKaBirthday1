@@ -428,7 +428,7 @@ $(function(){
 		var url_img = "url('img/background"+bgno+".jpg')";
 		document.body.style.backgroundImage = url_img;
 		$fade(quizData);
-		bgno++;
+		bgno=bgno+1;
 	});
 
 	// Easter egg to chastize the user
