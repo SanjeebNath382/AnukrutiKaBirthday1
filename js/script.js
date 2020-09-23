@@ -393,6 +393,8 @@ let helpers = {
 	}
 }
 
+var bgno = 1;
+
 // Lets start the show
 $(function(){
 
@@ -417,7 +419,10 @@ $(function(){
 
 	// Submit your answer to display feedback and advance question counter
 	$('.question-answer-wrapper').on('click', '.submit-btn', function(e){
+		var url_img = "url('img/background"+bgno+".jpg')";
+		document.body.style.backgroundImage = url_img;
 		submitAnswer(quizData);
+		bgno = bgno+1;
 	});
 
 	// Submit your answer to display feedback and advance question counter
