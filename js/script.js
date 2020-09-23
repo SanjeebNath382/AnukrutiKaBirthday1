@@ -196,15 +196,18 @@ function $fade(appState){
 // Work in progress...
 function $showResults(appState){
 	if(appState.correctAnswers === 10){
-		let endMsg = `You got ${appState.percCorrect}% correct!
-Badhaiyan Badhaiyan Badhaiyan!
-`;
-	} else {
+		let endMsg = `You got ${appState.percCorrect}% correct!`;
+		let endFeedback = `Badhaiyan Badhaiyan Badhaiyan! Here is your Gift - "<a href = "https://www.canva.com/folder/all-designs">ENJOY!</a>"`;
+		
+		$('.quiz-end-score').html(endMsg);
+		$('.quiz-end-feedback-p').html(endFeedback);
+	} 
+	else {
 		$('.answer-btn').remove();
 		let endMsg = `You got ${appState.percCorrect}% correct!`
-		let endFeedback = ``;
+		let endFeedback = `Badhai ho Mummy You won! here is the secret link :p -`;
 		if(appState.progress.incorrectCategories.length === 0){
-			endFeedback = `Badhai ho Mummy You won! here is the secret link :p - "<a href="https://bit.ly/sr_paper"> CLICK HERE </a>" `;
+			endFeedback = `Badhai ho Mummy You won! here is the secret link :p -`;
 		} else {
 			endFeedback = `You Lost Mummy`;
 		}
@@ -215,9 +218,9 @@ Badhaiyan Badhaiyan Badhaiyan!
 			$failList.append("<li class='category'>" + cat + "</li>");
 		}));
 		$('.quiz-end-feedback-p').html(endFeedback);
-		$('.quiz-end-categories').append($failList);
-		$('.results-wrapper').removeClass('hide').css('display', 'flex');
-		$('.question-answer-wrapper, .results-wrapper, .quiz-end-feedback, .quiz-end-score, .retry-btn').css('display', 'flex').fadeIn(500);		
+		// $('.quiz-end-categories').append($failList);
+		// $('.results-wrapper').removeClass('hide').css('display', 'flex');
+		// $('.question-answer-wrapper, .results-wrapper, .quiz-end-feedback, .quiz-end-score, .retry-btn').css('display', 'flex').fadeIn(500);		
 	} 
 }
 
@@ -343,7 +346,7 @@ function submitAnswer(appState){
 // Silly easter egg for saying you don't want to do the quiz
 function killQuiz(){
 	$('.start-quiz, .quit-quiz').hide();
-	let failureMsg = "You can not give up on us this easily Mummy. Your kids are disappointed. TRY AGAIN and FAIL. FAIL unitill you suceed, A big surprise awaits you at the end of this Quiz. You Won't get it Untill you Suceed...."
+	let failureMsg = "What is this behaviour mumma ? Your kids are disappointed over the fact that you blatantly dismissed our efforts and choose to pay more attention to the button that read ‘Quit’ over ’Start’. This is utterly ridiculous and mumma can only reprimand their kids for the results but not run away from her own examination jiska syllabus also is herself. You do not hold the right to give up on us like that! Explanation awaited. Just like a surprise awaits you, even though you have committed the treacherous act of clicking ‘quit’ you better give all answers correct to make it to our surprise. We repeat, keep trying until you are 100% correct. Thank you. Happy Birthday. Period. <br> Ab chup chap khelo."
 	let msgSplit = failureMsg.split(" ");
 	let counter = 0;
 	$('.question').empty();
@@ -392,7 +395,7 @@ let helpers = {
 		}))
 	}
 }
-
+var bgno = 1;
 // Lets start the show
 $(function(){
 
@@ -422,7 +425,10 @@ $(function(){
 
 	// Submit your answer to display feedback and advance question counter
 	$('.question-answer-wrapper').on('click', '.continue-btn', function(){
+		var url_img = "url('img/background"+bgno+".jpg')";
+		document.body.style.backgroundImage = url_img;
 		$fade(quizData);
+		bgno++;
 	});
 
 	// Easter egg to chastize the user

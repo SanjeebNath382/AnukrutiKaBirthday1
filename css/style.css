@@ -36,6 +36,11 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;	
+	-webkit-transition: background 1s ease-in-out;
+	-moz-transition: background 1s ease-in-out;
+	-o-transition: background 1s ease-in-out;
+	-ms-transition: background 1s ease-in-out;    
+	transition: background 1s ease-in-out;
 }
 header {
 	background: rgba(0,0,0,0.5);
