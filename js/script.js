@@ -197,7 +197,7 @@ function $fade(appState){
 function $showResults(appState){
 	if(appState.correctAnswers === 10){
 		let endMsg = `You got ${appState.percCorrect}% correct!`;
-		let endFeedback = `Badhaiyan Badhaiyan Badhaiyan! Here is your Gift - "<a href = "https://www.canva.com/folder/all-designs">ENJOY!</a>"`;
+		let endFeedback = `Badhaiyan Badhaiyan Badhaiyan! Here is your Gift - "<a href = "https://drive.google.com/drive/folders/1qs3pwg_Y1PUJD9TAC4xc_6xi3vhGLkVU?usp=sharing">ENJOY!</a>"`;
 		
 		$('.quiz-end-score').html(endMsg);
 		$('.quiz-end-feedback-p').html(endFeedback);
