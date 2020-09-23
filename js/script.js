@@ -35,7 +35,7 @@ const STORE = {
     correctAnswer: "All of the above"
    }],
    JustAnuThings: [{
-    question: "Who has Anu third wheeled the most with?",
+    question: "Who has Anukruti third wheeled the most with?",
     code: ``,
     answers: [
      "Shreyash Priyanshi",
@@ -90,7 +90,7 @@ const STORE = {
     correctAnswer: "We don't really know"
    }],
    JustThings: [{
-    question: "What are the things we haven't used as a makeup on Anukriti's face:",
+    question: "What are the things we haven't used as a makeup on Anukruti's face:",
     code: ``,
     answers: [
      "Tomato",
@@ -101,7 +101,7 @@ const STORE = {
     correctAnswer: "Egg"
    }],
    JustMomThings: [{
-    question: "With who among the following is Anukriti secretly dating:",
+    question: "With who among the following is Anukruti secretly dating:",
     code: ``,
     answers: [
      "Priyadarshini",
