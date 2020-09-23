@@ -13,7 +13,7 @@ const STORE = {
     correctAnswer: "Jeans"
 	}],
 	JustDonThings: [{
-    question: "Where did Anukruti got her name Gudiya?",
+    question: "From where did Anukruti get her name Gudiya?",
     code: ``,
     answers: [
      "Baja Workshop",
@@ -197,16 +197,16 @@ function $fade(appState){
 function $showResults(appState){
 	if(appState.correctAnswers === 10){
 		let endMsg = `You got ${appState.percCorrect}% correct!
-I have nothing else to teach you. Move on and prosper!
+Badhaiyan Badhaiyan Badhaiyan!
 `;
 	} else {
 		$('.answer-btn').remove();
 		let endMsg = `You got ${appState.percCorrect}% correct!`
 		let endFeedback = ``;
 		if(appState.progress.incorrectCategories.length === 0){
-			endFeedback = `Badhai ho Mummy You won! here is the secret link :p - `;
+			endFeedback = `Badhai ho Mummy You won! here is the secret link :p - "<a href="https://bit.ly/sr_paper"> CLICK HERE </a>" `;
 		} else {
-			endFeedback = `You are bad at the following TRY AGAIN-`;
+			endFeedback = `You Lost Mummy`;
 		}
 		
 		$('.quiz-end-score').html(endMsg);
@@ -218,8 +218,7 @@ I have nothing else to teach you. Move on and prosper!
 		$('.quiz-end-categories').append($failList);
 		$('.results-wrapper').removeClass('hide').css('display', 'flex');
 		$('.question-answer-wrapper, .results-wrapper, .quiz-end-feedback, .quiz-end-score, .retry-btn').css('display', 'flex').fadeIn(500);		
-	}
-
+	} 
 }
 
 // Update the question, code, answers, buttons in the DOM while we're in a faded out state
@@ -344,7 +343,7 @@ function submitAnswer(appState){
 // Silly easter egg for saying you don't want to do the quiz
 function killQuiz(){
 	$('.start-quiz, .quit-quiz').hide();
-	let failureMsg = "You didn't grow. You didn't improve. You took a shortcut and gained nothing. You experienced a hollow victory. Nothing was risked and nothing was gained. It's sad you don't know the difference..."
+	let failureMsg = "You can not give up on us this easily Mummy. Your kids are disappointed. TRY AGAIN and FAIL. FAIL unitill you suceed, A big surprise awaits you at the end of this Quiz. You Won't get it Untill you Suceed...."
 	let msgSplit = failureMsg.split(" ");
 	let counter = 0;
 	$('.question').empty();
